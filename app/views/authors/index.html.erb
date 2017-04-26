@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Books App - Full Metal Brackets</title>
+  </head>
+  <body>
+    <h1>Authors</h1>
+
+    <ul>
+      <% @authors.each do |author| %>
+        <li><%= author.full_name %></li>
+      <% end %>
+    </ul>
+
+    <a href="/">Back</a>
+
+  </body>
+</html>
