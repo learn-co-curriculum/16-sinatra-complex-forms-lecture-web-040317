@@ -1,11 +1,3 @@
-## Rack to Sinatra
+## Sinatra
 
-| Our Application |
-| Rack |
-| Some Web Server Application - WebBrick, Puma |
-| Operating System |
-| Physical Server  |
-
-
-GET '/books' => seeing all of the books
-POST '/books' => creating a book
+As a user, I should be able to view a list of all the authors
