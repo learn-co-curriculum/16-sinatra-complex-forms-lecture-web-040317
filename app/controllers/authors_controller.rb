@@ -10,7 +10,12 @@ class AuthorsController < ApplicationController
   end
 
   post '/authors' do
-   "POST TO AUTHORS"
+   author = Author.new(params[:author])
+   if author.save
+     redirect to('/authors')
+   else
+     erb :'authors/new.html'
+   end
   end
 
 end
