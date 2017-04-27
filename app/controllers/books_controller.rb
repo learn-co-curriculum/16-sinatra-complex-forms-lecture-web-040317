@@ -19,7 +19,6 @@ class BooksController < ApplicationController
     #   author_name: "String",
     #   genre_ids: ["1", "2"]
     #   }}
-    binding.pry
     book = Book.create(params[:book])
     redirect to('/books')
   end
