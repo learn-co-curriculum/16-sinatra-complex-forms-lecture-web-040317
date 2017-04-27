@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   end
 
   get '/books/new' do
+    @authors = Author.order(:first_name)
     erb :"books/new.html"
   end
 
@@ -29,7 +30,7 @@ class BooksController < ApplicationController
     if book.update(params[:book])
       redirect to("/books/#{book.id}")
     else
-      erb :'books/edit.html'
+      redirect to("/books/#{book.id}/edit")
     end
   end
 end

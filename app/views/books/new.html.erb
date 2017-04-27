@@ -8,8 +8,22 @@
     <h1>Create a New Book</h1>
 
     <form action="/books" method="POST">
+      <label for="book[title]">Book Title</label>
       <input type="text" placeholder="Book Title" name="book[title]" />
+      <!-- For every author that exists in my database
+
+      create a new option in a dropdown list
+      if that option is selected - use that author's author_id in params -->
+      <label for="book[author_id]">Book Author</label>
+      <select name="book[author_id]">
+        <% @authors.each do |author| %>
+          <option value="<%= author.id %>"><%= author.full_name %></option>
+        <% end %>
+      </select>
+      <label for="book[snippet]">Book Snippet</label>
       <textarea placeholder="Book Snippet" name="book[snippet]"></textarea>
+      <label for="book[author_name]">Or Find or Create an Author By Name</label>
+      <input type="text" placeholder="Author Name" name="book[author_name]" />
       <input type="submit" />
     </form>
     <a href='/books'>All Books</a>
