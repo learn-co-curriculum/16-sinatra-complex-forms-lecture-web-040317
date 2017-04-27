@@ -17,5 +17,12 @@ with a first name and a last name
     2. What URL should take the user there?
 
 As a site visitor, I should be able to edit an existing book
-  1. Does my schema need to change?
-  2. What URL should take the user there?
+
+  + As a site visitor, I should be able to see a form to edit an existing book √
+    1. Does my schema need to change? √
+    2. What URL should take the user there? GET "/books/:id/edit"
+  + As a site visitor, submitting a form to edit an existing book should update that record in the database
+    1. Does my schema need to change?
+    2. What URL should take the user there?
+
+    '/books/:id'

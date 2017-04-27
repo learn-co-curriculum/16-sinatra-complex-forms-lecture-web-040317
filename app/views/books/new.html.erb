@@ -8,8 +8,8 @@
     <h1>Create a New Book</h1>
 
     <form action="/books" method="POST">
-      <input type="text" placeholder="Book Title" name="title" />
-      <textarea placeholder="Book Snippet" name="snippet"></textarea>
+      <input type="text" placeholder="Book Title" name="book[title]" />
+      <textarea placeholder="Book Snippet" name="book[snippet]"></textarea>
       <input type="submit" />
     </form>
     <a href='/books'>All Books</a>
