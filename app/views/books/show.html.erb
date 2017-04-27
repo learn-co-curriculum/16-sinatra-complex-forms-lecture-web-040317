@@ -12,6 +12,14 @@
     <p><%= @book.snippet %></p>
     <p><%= @book.author_full_name %></p>
 
+    <h3>Genres</h3>
+
+    <ul>
+      <% @book.genres.each do |genre| %>
+        <li><%= genre.name %></li>
+      <% end %>
+    </ul>
+
     <a href='/books'>Back</a>
     <a href='/books/<%= @book.id %>/edit'>Edit This Book</a>
 

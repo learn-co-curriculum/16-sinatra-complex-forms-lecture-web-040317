@@ -7,11 +7,20 @@ class BooksController < ApplicationController
 
   get '/books/new' do
     @authors = Author.order(:first_name)
+    @genres = Genre.order(:name)
     erb :"books/new.html"
   end
 
   post '/books' do
-    Book.create(params[:book])
+    # {book: {
+    #   title: "String",
+    #   author_id: "24",
+    #   snippet: 'String',
+    #   author_name: "String",
+    #   genre_ids: ["1", "2"]
+    #   }}
+    binding.pry
+    book = Book.create(params[:book])
     redirect to('/books')
   end
 
